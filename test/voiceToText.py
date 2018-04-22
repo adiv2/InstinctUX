@@ -14,6 +14,7 @@ try:
     voiceString = r.recognize_google(audio)
     print("You said: " + voiceString)
     # Call mapper.py with voice string as arg
+    print("mapper was called")
     os.system("python3 mapper.py " + '"'+voiceString + '"')
     # Error handling
 except sr.UnknownValueError:
