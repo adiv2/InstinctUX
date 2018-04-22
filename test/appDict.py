@@ -4,3 +4,10 @@ appDict = {
 
 
 }
+
+actionDict = {
+    "system": ["shutdown", "reboot", "restart", "halt"],
+    "windows": ["close", "minimize", "workspace"],
+
+
+}

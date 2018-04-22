@@ -1,6 +1,6 @@
 from selenium.webdriver.common.keys import Keys
-from test.clean import clean
-from test.clean import removeWords
+from test.nlp import clean
+from test.nlp import removeWords
 import test.selenium_helper as chrome
 import sys
 #voiceString = sys.argv[1]
