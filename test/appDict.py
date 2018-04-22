@@ -1,5 +1,5 @@
 appDict = {
-    "chrome": ["browser", "chrome", "google chrome"],
+    "youtube": ["youtube"],
     "emails": ["messages", "emails", "email"],
 
 

@@ -2,19 +2,21 @@ from selenium import webdriver
 from test.nlp import tag
 from selenium.webdriver.common.keys import Keys
 from test.clean import clean
+from test.clean import removeWords
+import test.selenium_helper as chrome
 import sys
-voiceString = sys.argv[1]
-driverPath = "/home/aditya/chromedriver"
-# create a new Chrome session
+#voiceString = sys.argv[1]
+removeAppWords = [" google ", " search ", " find "]  # add empty space around words
+voiceString = "google best player "   # Test without calling voice to text
+removeWords += removeAppWords
+searchQuery = clean(removeWords, voiceString)
 
-voiceString = clean(voiceString)
-
-driver = webdriver.Chrome(driverPath)
 # driver.implicitly_wait(30)
 # driver.maximize_window()
 
 # navigate to the application home page
-driver.get("http://www.google.com")
-search = driver.find_element_by_name('q')
-search.send_keys(voiceString)
+chrome.driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
+chrome.driver.get("http://www.google.com")
+search = chrome.driver.find_element_by_name('q')
+search.send_keys(searchQuery)
 search.send_keys(Keys.RETURN)

@@ -15,7 +15,7 @@ try:
     print("You said: " + voiceString)
     # Call mapper.py with voice string as arg
     print("mapper was called")
-    os.system("python3 mapper.py " + '"'+voiceString + '"')
+    os.system("python3 mapper.py  " + '"'+voiceString + '"')
     # Error handling
 except sr.UnknownValueError:
     print("Google Speech Recognition could not understand audio")

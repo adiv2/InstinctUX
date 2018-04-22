@@ -1,7 +1,8 @@
 import nltk
 from pickle import load
-input = open('../tagger/tagger.pkl', 'rb')
-tagger = load(input)
+inputPKL = open('../Tagger/tagger.pkl', 'rb')
+tagger = load(inputPKL)
+
 
 def tag(sent):
     sent = sent[0].title() + sent[1:]
