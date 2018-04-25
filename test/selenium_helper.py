@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 user = "aditya"
-chromeDriverPath = "/home/aditya/chromedriver"
+chromeDriverPath = "chromedriver"
 options = webdriver.ChromeOptions()
 options.add_argument("user-data-dir=/home/" + user + "/.config/google-chrome") #Path to your chrome profile
 driver = webdriver.Chrome(executable_path=chromeDriverPath, chrome_options=options)

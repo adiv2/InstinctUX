@@ -1,15 +1,15 @@
 import sys
-sys.path.insert(0, '/home/aditya/Snakes/InstinctUX/')
+sys.path.insert(0, 'InstinctUX/')
 from test.nlp import tag
 from test.appDict import appDict
 from test.appDict import actionDict
 import os
 
-os.system("mkdir /home/aditya/Desktop/mapper/")
+os.system("mkdir /home/aditya/Desktop/mapper/") # debugging
 voiceString = sys.argv[1]
 
 # voiceString = "shutdown computer"   # Test without calling voice to text
-runPath = "/home/aditya/Snakes/InstinctUX/run/"
+runPath = "InstinctUX/run/"
 print(tag(voiceString))
 # tags is a dictionary of tagged words after NLP
 tags = tag(voiceString)
@@ -24,7 +24,7 @@ if "NOUN" in keys:
         for j in range(0, len(nouns)):
             if nouns[j].lower() in appDict.get(appKeys[i]):
                 google = 1
-                os.system("mkdir /home/aditya/Desktop/mapper/"+appKeys[i])
+                os.system("mkdir /home/aditya/Desktop/mapper/"+appKeys[i]) # debugging
                 os.system("python3 "+runPath + appKeys[i]+".py " + '"'+voiceString + '"')
 
 if "VERB" in keys:
@@ -34,7 +34,7 @@ if "VERB" in keys:
         for j in range(0, len(verbs)):
             if verbs[j].lower() in actionDict.get(actionKeys[i]):
                 google = 1
-                os.system("mkdir /home/aditya/Desktop/mapper/" + actionKeys[i])
+                os.system("mkdir /home/aditya/Desktop/mapper/" + actionKeys[i])  # debugging
                 os.system("python3 " + runPath + actionKeys[i] + ".py " + '"' + voiceString + '"')
 
 

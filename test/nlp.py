@@ -1,6 +1,6 @@
 import nltk
 from pickle import load
-inputPKL = open('/home/aditya/Snakes/InstinctUX/Tagger/tagger.pkl', 'rb')
+inputPKL = open('InstinctUX/Tagger/tagger.pkl', 'rb')
 tagger = load(inputPKL)
 
 

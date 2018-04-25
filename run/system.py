@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '/home/aditya/Snakes/InstinctUX/')
+sys.path.insert(0, 'InstinctUX/')
 import os
 from test.nlp import clean
 

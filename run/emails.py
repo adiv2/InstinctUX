@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, 'InstinctUX/')
 from selenium.webdriver.common.keys import Keys
 import test.selenium_helper as chrome
 chrome.driver.get('https://mail.google.com/')

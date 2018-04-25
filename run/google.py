@@ -1,11 +1,13 @@
+import sys
+sys.path.insert(0, 'InstinctUX/')
 from selenium.webdriver.common.keys import Keys
 from test.nlp import clean
 from test.nlp import removeWords
 import test.selenium_helper as chrome
 import sys
-#voiceString = sys.argv[1]
+voiceString = sys.argv[1]
 removeAppWords = [" google ", " search ", " find "]  # add empty space around words
-voiceString = "google best player "   # Test without calling voice to text
+# voiceString = "google best player "   # Test without calling voice to text
 removeWords += removeAppWords
 searchQuery = clean(removeWords, voiceString)
 
