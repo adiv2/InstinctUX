@@ -1,5 +1,6 @@
 import nltk
 from pickle import load
+from nltk.corpus import stopwords
 inputPKL = open('../Tagger/tagger.pkl', 'rb')
 tagger = load(inputPKL)
 
@@ -20,10 +21,10 @@ def tag(sent):
 removeWords = [" please ", " can ", " you ", " me ", " your ", " tell ", "what ", "where ", " which ", " is ", " the ", " who "]
 
 
+
 def clean(removeWords, voiceString):
-    voiceString.lower()
-    voiceString = " " + voiceString + " "
-    for x in removeWords:
-        voiceString = voiceString.replace(x, " ")
-    return voiceString
+    stopword = stopwords.words('english')
+    clean_string = ' '.join([word for word in voiceString.split() if word.lower() not in stopword])
+    return clean_string
+
 
