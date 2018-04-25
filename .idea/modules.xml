@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/InstinctUX.iml" filepath="$PROJECT_DIR$/.idea/InstinctUX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/instinct@vedant.example.com.iml" filepath="$PROJECT_DIR$/.idea/instinct@vedant.example.com.iml" />
     </modules>
   </component>
 </project>

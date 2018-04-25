@@ -1,5 +1,3 @@
-from selenium import webdriver
-from test.nlp import tag
 from selenium.webdriver.common.keys import Keys
 from test.nlp import clean
 from test.nlp import removeWords

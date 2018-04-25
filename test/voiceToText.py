@@ -1,5 +1,6 @@
 import speech_recognition as sr
 import os
+testPath = "/home/aditya/Snakes/InstinctUX/test/"
 # Lists and prints microphones found
 for index, name in enumerate(sr.Microphone.list_microphone_names()):
     # print("Microphone with name \"{1}\" found for `Microphone(device_index={0})`".format(index, name))
@@ -7,6 +8,7 @@ for index, name in enumerate(sr.Microphone.list_microphone_names()):
 with sr.Microphone() as source:
     r.adjust_for_ambient_noise(source)
     print("Say something!")
+    os.system("mkdir /home/aditya/Desktop/VoiceStrings/")
 # Listening for audio input
     audio = r.listen(source)
 try:
@@ -15,7 +17,8 @@ try:
     print("You said: " + voiceString)
     # Call mapper.py with voice string as arg
     print("mapper was called")
-    os.system("python3 mapper.py  " + '"'+voiceString + '"')
+    os.system("mkdir /home/aditya/Desktop/VoiceStrings/"+voiceString)
+    os.system("python3 "+testPath+"mapper.py  " + '"'+voiceString + '"')
     # Error handling
 except sr.UnknownValueError:
     print("Google Speech Recognition could not understand audio")

@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, '/home/aditya/Snakes/InstinctUX/')
 from selenium.webdriver.common.keys import Keys
 from test.nlp import clean
 from test.nlp import removeWords
