@@ -1,6 +1,13 @@
 appDict = {
-    "chrome": ["browser", "chrome", "google chrome"],
-    "emails": ["messages", "emails"],
-    "weather": ["raining", "temperature", "weather"]
+    "youtube": ["youtube"],
+    "emails": ["messages", "emails", "email"],
+
+
+}
+
+actionDict = {
+    "system": ["shutdown", "reboot", "restart", "halt"],
+    "windows": ["close", "minimize", "workspace"],
+
 
 }
