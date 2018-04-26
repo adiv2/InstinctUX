@@ -1,6 +1,7 @@
 import nltk
 from pickle import load
-inputPKL = open('InstinctUX/Tagger/tagger.pkl', 'rb')
+username = 'aditya'
+inputPKL = open('/home/'+username+'/InstinctUX/Tagger/tagger.pkl', 'rb')
 tagger = load(inputPKL)
 
 

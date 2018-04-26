@@ -11,8 +11,6 @@ removeAppWords = [" google ", " search ", " find "]  # add empty space around wo
 removeWords += removeAppWords
 searchQuery = clean(removeWords, voiceString)
 
-# driver.implicitly_wait(30)
-# driver.maximize_window()
 
 # navigate to the application home page
 chrome.driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
